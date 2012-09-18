@@ -47,7 +47,6 @@ function! s:RunShellCommand(cmdline)
     botright new
     setlocal buftype=nofile bufhidden=wipe nobuflisted noswapfile nowrap
     call setline(1, 'Output of:    ' . a:cmdline)
-"    call setline(2, 'Expanded Form:  ' .expanded_cmdline)
     call setline(2,substitute(getline(1),'.','=','g'))
     execute '$read !'. expanded_cmdline
     setlocal nomodifiable
@@ -58,7 +57,7 @@ let g:ctrlp_open_new_file = 'r'
 
 nmap <C-w>q <Plug>Kwbd
 
-set laststatus=2 statusline=%02n:%<%f\ %h%m%r%=%-14.(%l,%c%V%)\ %P
+set laststatus=2 statusline=%<%f\ %h%m%r%=%{\"[\".(&fenc==\"\"?&enc:&fenc).((exists(\"+bomb\")\ &&\ &bomb)?\",B\":\"\").\"]\ \"}%k\ %-14.(%l,%c%V%)\ %P
 set wildchar=<Tab> wildmenu wildmode=full
 
 let mapleader = ","
