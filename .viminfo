@@ -1,4 +1,4 @@
-# Этот файл viminfo автоматически создан Vim 7.0.
+# Этот файл viminfo автоматически создан Vim 7.3.
 # Его можно (осторожно!) редактировать.
 
 # Значение опции 'encoding' в момент записи файла
@@ -6,116 +6,41 @@
 
 
 # hlsearch on (H) or off (h):
-~H
+~h
 # Last Search Pattern:
-~MSle0~/autoMar
-
-# Последняя строка для замены:
-$
+~MSle0~/fugitive
 
 # Командная строка, история (начиная от свежего к старому):
-:qa
-:w
-:tabe .scripts/svn_diff_vim.pl
 :q
-:set encoding=cp1251
-:w ++enc=cp1251
-:e ../../perllib/GOGO/Process/Open.pm
-:RR perl %
-:RR pwd
-:saveas ../../perllib/GOGO/Process/Open.pm
-:saveas ../../perllib/GOGO/Process/
-:RR grep -nrP 'getByPortionId' ./*|grep -v \.svn
-:e! ~/.vimrc
-:e ! ~/.vimrc
-:help ctrlp-commands
-:RR ls -la raw_data/
-:RR ll raw_dat
-:RR ~/perl514 % --domain mail.ru
-:500
-:qa!
-:ls
-:bprev
-:RR echo %
-:echo %
-:bnext
-:557
-:Kwbd
-:Bclose
-:set syntax=apache
-:set syntax=conf
-:b1
-:b3
-:b!1
-:diffu
-:e! .vimrc
 :q!
-:windo diffoff
-:windo diffthis
+:set fenc=cp1251
+:command e ++enc=cp1251 e
+:setlocal enc=cp1251
+:432
+:e ++enc=cp1251 www/lib/GOGO/SQ.pm
+:setlocal encoding=cp1251
+:qa
+:wqa
+:CtrlP
+:CtrlPCurWD
+:vnew ~/git/my_vim/.vimrc
+:w
+:e ~/.bashrc
+:qa!
+:wq
+:diffsplit ~/hlam/vim73/runtime/syntax/perl.vim
 :set diffopt=vertical
-:r !ls
-:new
-:setlocal diff
-:vnew
-:1,$d
-:vsp
-:1,$r !ls
-:h :d
-:d gg
-:d
-:gg,Gr !ls
+:BundleInstall
 
 # Строка поиска, история (начиная от свежего к старому):
-?/autoMar
-?/findN
-?/enum
-?/split
-?/edit
-? \<diff\>
-?/path
-? \<sub\>
-? \<0\>
-? ^\d\{3}?
-?/getRow
-?/xpi
-?/mime
-?/AddType
-?/Type
-?/disconnect
-?/external
-?/import
-??extr
-?/00
-??$bMultiple
-?/65
-?/extrclass
-?/65
-?/65
-?/65
-?/65
-?/65
-?/65
-?/65
-?/65
-?/65
-?/65
-?/65
-?/65
-?/65
-?/00
-?/65
-?/65
-?/65
-?/65
-?/65
-?/Р В Р’В Р В Р вЂ№Р В Р’В Р вЂ™Р’В»Р В Р’В Р вЂ™Р’ВµР В Р’В Р СћРІР‚??Р В Р Р‹Р РЋРІР‚Сљ
-?/65
-?/65
-?/65
-?/65
-?/65
-?/65
-?/Р В Р Р‹Р В Р’В»Р В Р’ВµР В РўвЂ??Р РЋРЎвЂњ
+?/fugitive
+?/sha1sum
+? \<w_die\>
+? \<win\>
+?/screen
+?/Power
+?/status
+?/encoding
 
 # Выражение, история (начиная от свежего к старому):
 
@@ -124,278 +49,245 @@ $
 # Строка ввода, история (начиная от свежего к старому):
 
 # Регистры:
-"0	LINE	0
-	    ( $bHorizontal ? '' : ',vertical').
+""0	CHAR	0
+	l
 "1	LINE	0
-	    ( $bCp1251 ? ',encodig=cp1251' : '').
-"2	LINE	0
-	sleep 30;
+	        map <leader>l :CtrlPBuffer<CR>
+"2	CHAR	0
+	,
+	    lazy        => 1,
+	    default     => sub
+	    {
+	        my $self = shift;
 "3	LINE	0
-	print Dumper [$rOpen->read_all()];
-"4	LINE	0
-	use Moose::Util::TypeConstraints; 
-"5	LINE	0
-	use lib '/home/arefjev/svn/search_trunk/perllib';
-"6	LINE	0
-	{
-	    my ($self) = @_;
-	    return $self->_read();
 	}
-"7	CHAR	0
+	C
+	Desktop
+	doc
+	Documents
+	dot-psgi
+	Downloads
+	Dropbox
+	git
+	git.tgz
+	mount
+	Music
+	nerdtree_plugin
+	pgadmin.log
+	Pictures
+	plugin
+	Public
+	svn
+	syntax
+	Templates
+	Videos
+	VirtualBox VMs
 	
-	    
+"4	LINE	0
+	# You may add here your
+	# server {
+	#	...
+	# }
+	# statements for each of your virtual hosts to this file
+	
+	##
+	# You should look at the following URL's in order to grasp a solid understanding
+	# of Nginx configuration files in order to fully unleash the power of Nginx.
+	# http://wiki.nginx.org/Pitfalls
+	# http://wiki.nginx.org/QuickStart
+	# http://wiki.nginx.org/Configuration
+	#
+	# Generally, you will want to move this file somewhere, and start with a clean
+	# file but keep this around for reference. Or just disable in sites-enabled.
+	#
+	# Please see /usr/share/doc/nginx-doc/examples/ for more detailed examples.
+	##
+	
+	server {
+		#listen   80; ## listen for ipv4; this line is default and implied
+		#listen   [::]:80 default ipv6only=on; ## listen for ipv6
+	
+		root /usr/share/nginx/www;
+		index index.html index.htm;
+	
+		# Make site accessible from http://localhost/
+		server_name localhost;
+	
+		location / {
+			# First attempt to serve request as file, then
+			# as directory, then fall back to index.html
+			try_files $uri $uri/ /index.html;
+			# Uncomment to enable naxsi on this location
+			# include /etc/nginx/naxsi.rules
+		}
+	
+		location /doc/ {
+			alias /usr/share/doc/;
+			autoindex on;
+			allow 127.0.0.1;
+			deny all;
+		}
+	
+		# Only for nginx-naxsi : process denied requests
+		#location /RequestDenied {
+			# For example, return an error code
+			#return 418;
+		#}
+	
+"5	LINE	0
+	
+"6	LINE	0
+	2012-05-14 12:58:42 ERROR  : ERROR:  table name "users" specified more than once
+"7	LINE	0
+	2012-05-14 12:58:42 ERROR  : ERROR:  table name "users" specified more than once
 "8	LINE	0
-	    my ($self) = @_;
+	2012-05-14 12:58:42 ERROR  : ERROR:  table name "users" specified more than once
 "9	LINE	0
-	    confess 'Process input is not opened'
-	        unless $self->_write()->opened();
-""-	CHAR	0
-	;
+	2012-04-28 15:41:02 ERROR  : There is nothing in the SQL pane to save!
+"-	CHAR	0
+	l
 
 # Глобальные отметки:
-'0  40  46  ~/.scripts/svn_diff_vim.pl
-'1  8  0  ~/svn/search_trunk/perllib/GOGO/Process/Open.pm
-'2  2  0  /tmp/arefjev_svn_diff/GOGO_Process_Open.pm
-'3  40  0  ~/svn/search_trunk/perllib/GOGO/Process/Open.pm
-'4  4  0  ~/svn/search_trunk/perllib/GOGO/Process/Open.pm
-'5  59  4  ~/.vim/ctrlp/autoload/ctrlp.vim
-'6  662  63  ~/.vim/ctrlp/doc/ctrlp.txt
-'7  12  0  ~/svn/search_trunk/projects/webmaster/lib/GOGO/WebMaster/DomainData/Detailed.pm
-'8  85  0  ~/svn/search_trunk/projects/webmaster/bin/hbase_stat_fetcher.pl
-'9  89  0  ~/svn/search_trunk/projects/webmaster/bin/hbase_stat_fetcher.pl
+'0  1  0  ~/.bashrc
+'1  163  0  ~/svn/search_trunk/projects/sq/www/lib/GOGO/SQ/Interface/Assessor.pm
+'2  1  0  ~/svn/search_trunk/projects/sq/www/lib/GOGO/SQ/Interface/Assessor.pm
+'3  182  6  ~/vim73/share/vim/vim73/autoload/spellfile.vim
+'4  432  23  ~/vim73/share/vim/vim73/menu.vim
+'5  64  19  ~/svn/search_trunk/projects/sq/www/lib/GOGO/SQ.pm
+'6  25  18  ~/svn/search_trunk/projects/sq/www/lib/GOGO/SQ/Interface/Assessor.pm
+'7  785  4  ~/svn/search_trunk/projects/sq/www/lib/GOGO/SQ/Interface/Assessor.pm
+'8  878  0  /tmp/arefjev_svn_diff/lib_GOGO_WebMaster_DomainData_Detailed.pm
+'9  1  0  lib/GOGO/WebMaster/DomainData/Detailed.pm
 
 # Список прыжков (сначала более свежие):
--'  40  46  ~/.scripts/svn_diff_vim.pl
--'  68  0  ~/.vimrc
--'  60  0  ~/.vimrc
--'  8  0  ~/svn/search_trunk/perllib/GOGO/Process/Open.pm
--'  2  0  /tmp/arefjev_svn_diff/GOGO_Process_Open.pm
--'  1  0  /tmp/arefjev_svn_diff/GOGO_Process_Open.pm
--'  40  0  ~/svn/search_trunk/perllib/GOGO/Process/Open.pm
--'  1  0  ~/svn/search_trunk/perllib/GOGO/Process/Open.pm
--'  4  0  ~/svn/search_trunk/perllib/GOGO/Process/Open.pm
--'  79  8  ~/svn/search_trunk/perllib/GOGO/Process/Timeout.pm
--'  15  18  ~/svn/search_trunk/perllib/test.pl
--'  99  3  ~/svn/search_trunk/perllib/GOGO/Process/Open.pm
--'  7  80  ~/svn/search_trunk/perllib/test.pl
--'  122  0  ~/svn/search_trunk/perllib/GOGO/Process/Open.pm
--'  155  8  ~/svn/search_trunk/projects/sq/www/lib/GOGO/SQ/Mark/WebRequest.pm
--'  44  0  ~/svn/search_trunk/perllib/GOGO/Process/Timeout.pm
--'  67  3  ~/svn/search_trunk/perllib/GOGO/Process/Open.pm
--'  43  0  ~/svn/search_trunk/perllib/GOGO/Process/Open.pm
--'  47  0  ~/svn/search_trunk/perllib/GOGO/Process/Open.pm
--'  34  0  ~/svn/search_trunk/perllib/GOGO/Process/Open.pm
--'  152  0  ~/svn/search_trunk/projects/sq/www/lib/GOGO/SQ/SysIface/Marks.pm
--'  1089  12  ~/svn/search_trunk/projects/sq/www/lib/GOGO/SQ/Interface/Assessor.pm
--'  140  0  ~/svn/search_trunk/projects/sq/www/lib/GOGO/SQ/SysIface/Marks.pm
+-'  1  0  ~/.bashrc
+-'  163  0  ~/svn/search_trunk/projects/sq/www/lib/GOGO/SQ/Interface/Assessor.pm
 -'  1  0  ~/svn/search_trunk/projects/sq/www/lib/GOGO/SQ/Interface/Assessor.pm
--'  59  4  ~/.vim/ctrlp/autoload/ctrlp.vim
--'  1  0  ~/.vim/ctrlp/autoload/ctrlp.vim
--'  374  0  ~/.vim/ctrlp/autoload/ctrlp.vim
--'  662  63  ~/.vim/ctrlp/doc/ctrlp.txt
--'  1  0  ~/.vim/ctrlp/doc/ctrlp.txt
--'  99  32  ~/svn/search_trunk/projects/webmaster/lib/GOGO/WebMaster/Constants.pm
--'  523  0  ~/svn/search_trunk/projects/webmaster/lib/GOGO/WebMaster/DomainData/Detailed.pm
--'  37  0  ~/svn/search_trunk/projects/webmaster/lib/GOGO/WebMaster/DomainData/Detailed/Url.pm
--'  59  4  ~/svn/search_trunk/projects/webmaster/var/webmaster.conf
--'  519  4  ~/svn/search_trunk/projects/webmaster/lib/GOGO/WebMaster/DomainData/Detailed.pm
--'  160  3  ~/svn/search_trunk/projects/webmaster/lib/GOGO/WebMaster/DomainData/Detailed.pm
--'  182  4  ~/svn/search_trunk/projects/webmaster/lib/GOGO/WebMaster/DomainData/Detailed.pm
--'  184  3  ~/svn/search_trunk/projects/webmaster/lib/GOGO/WebMaster/DomainData/Detailed.pm
--'  563  3  ~/svn/search_trunk/projects/webmaster/lib/GOGO/WebMaster/DomainData/Detailed.pm
--'  60  3  ~/svn/search_trunk/projects/webmaster/var/webmaster.conf
--'  58  0  ~/svn/search_trunk/projects/webmaster/var/webmaster.conf
--'  85  4  ~/svn/search_trunk/projects/webmaster/bin/hbase_stat_fetcher.pl
--'  1  0  ~/svn/search_trunk/projects/webmaster/bin/hbase_stat_fetcher.pl
--'  12  0  ~/svn/search_trunk/projects/webmaster/lib/GOGO/WebMaster/DomainData/Detailed.pm
--'  49  4  ~/svn/search_trunk/projects/webmaster/var/webmaster.conf
--'  1  0  ~/svn/search_trunk/projects/webmaster/var/webmaster.conf
--'  32  4  ~/svn/search_trunk/projects/webmaster/lib/GOGO/WebMaster/DomainData/Initial.pm
--'  1  0  ~/svn/search_trunk/projects/webmaster/lib/GOGO/WebMaster/DomainData/Detailed/Url.pm
--'  1  0  ~/svn/search_trunk/projects/webmaster/lib/GOGO/WebMaster/DomainData/Detailed.pm
--'  84  4  ~/svn/search_trunk/projects/webmaster/bin/hbase_stat_fetcher.pl
--'  89  0  ~/svn/search_trunk/projects/webmaster/bin/hbase_stat_fetcher.pl
--'  13  0  ~/svn/search_trunk/projects/webmaster/lib/GOGO/WebMaster/DomainData/Detailed.pm
--'  561  111  ~/svn/search_trunk/projects/webmaster/lib/GOGO/WebMaster/DomainData/Detailed.pm
--'  65  4  ~/svn/search_trunk/projects/webmaster/lib/GOGO/WebMaster/DomainData/Detailed.pm
--'  1  0  ~/svn/search_trunk/projects/webmaster/var/log4perl.conf
--'  62  4  ~/svn/search_trunk/projects/webmaster/lib/GOGO/WebMaster/DomainData/Detailed.pm
--'  56  0  ~/svn/search_trunk/projects/webmaster/lib/GOGO/WebMaster/DomainData/Detailed.pm
--'  1  0  ~/.vim/ctrlp/autoload/ctrlp/dir.vim
--'  195  4  ~/svn/search_trunk/projects/webmaster/lib/GOGO/WebMaster/DomainData/Detailed.pm
--'  207  4  ~/svn/search_trunk/projects/webmaster/lib/GOGO/WebMaster/DomainData/Detailed.pm
--'  197  8  ~/svn/search_trunk/projects/webmaster/lib/GOGO/WebMaster/DomainData/Detailed.pm
--'  1  0  ~/svn/search_trunk/projects/antirobot/include/word_request_handler.hpp
--'  52  4  ~/svn/search_trunk/projects/webmaster/lib/GOGO/WebMaster/DomainData/Detailed.pm
+-'  182  6  ~/vim73/share/vim/vim73/autoload/spellfile.vim
+-'  1  0  ~/vim73/share/vim/vim73/autoload/spellfile.vim
+-'  432  23  ~/vim73/share/vim/vim73/menu.vim
+-'  1  0  ~/vim73/share/vim/vim73/menu.vim
+-'  64  19  ~/svn/search_trunk/projects/sq/www/lib/GOGO/SQ.pm
+-'  1  0  ~/svn/search_trunk/projects/sq/www/lib/GOGO/SQ.pm
+-'  25  18  ~/svn/search_trunk/projects/sq/www/lib/GOGO/SQ/Interface/Assessor.pm
+-'  785  4  ~/svn/search_trunk/projects/sq/www/lib/GOGO/SQ/Interface/Assessor.pm
+-'  878  0  /tmp/arefjev_svn_diff/lib_GOGO_WebMaster_DomainData_Detailed.pm
 -'  1  0  /tmp/arefjev_svn_diff/lib_GOGO_WebMaster_DomainData_Detailed.pm
--'  101  0  ~/svn/search_trunk/projects/webmaster/lib/GOGO/WebMaster/DomainData/Initial.pm
--'  1  0  /tmp/arefjev_svn_diff/lib_GOGO_WebMaster_DomainData_Initial.pm
--'  111  0  ~/svn/search_trunk/projects/webmaster/lib/GOGO/WebMaster/Constants.pm
--'  1  0  /tmp/arefjev_svn_diff/lib_GOGO_WebMaster_Constants.pm
--'  329  0  ~/svn/search_trunk/projects/webmaster/lib/GOGO/WebMaster/Controller/Domain.pm
--'  1  0  /tmp/arefjev_svn_diff/lib_GOGO_WebMaster_Controller_Domain.pm
--'  35  4  ~/svn/search_trunk/projects/webmaster/script/webmaster_starman.development
--'  1  0  /tmp/arefjev_svn_diff/script_webmaster_starman.development
--'  5  0  ~/svn/search_trunk/projects/webmaster/root/static/css/main.css
--'  1  0  /tmp/arefjev_svn_diff/root_static_css_main.css
--'  52  35  ~/.scripts/svn_diff_vim.pl
--'  46  0  ~/.scripts/svn_diff_vim.pl
--'  56  0  ~/.scripts/svn_diff_vim.pl
--'  80  8  ~/.scripts/svn_diff_vim.pl
--'  97  32  ~/.scripts/svn_diff_vim.pl
--'  102  28  ~/.scripts/svn_diff_vim.pl
--'  90  35  ~/.scripts/svn_diff_vim.pl
--'  58  38  ~/.scripts/svn_diff_vim.pl
--'  50  41  ~/.vimrc
--'  45  0  ~/.scripts/svn_diff_vim.pl
--'  34  0  ~/.scripts/svn_diff_vim.pl
--'  154  0  ~/.scripts/svn_diff_vim.pl
--'  1  26  ~/.scripts/svn_diff_vim.pl
--'  48  0  ~/.vimrc
--'  34  0  ~/.vimrc
--'  241  0  ~/.viminfo
--'  35  0  ~/.vimrc
--'  21  0  ~/svn/search_trunk/projects/webmaster/lib/GOGO/WebMaster/DomainData.pm
--'  8  0  ~/svn/search_trunk/projects/webmaster/lib/GOGO/WebMaster/DomainData/Initial.pm
--'  71  0  ~/svn/search_trunk/projects/webmaster/lib/GOGO/WebMaster/DomainData/Detailed.pm
--'  77  0  ~/svn/search_trunk/projects/webmaster/lib/GOGO/WebMaster/DomainData/Detailed.pm
--'  1  0  /tmp/arefjev_svn_diff/bin_hbase_stat_fetcher.pl
--'  1  0  ~/svn/search_trunk/projects/webmaster/lib/GOGO/WebMaster/DomainData.pm
--'  1  0  /tmp/arefjev_svn_diff/lib_GOGO_WebMaster_DomainData.pm
--'  1  0  ~/svn/search_trunk/projects/webmaster/lib/GOGO/WebMaster/DomainData/Initial.pm
--'  1  0  ~/svn/search_trunk/projects/webmaster/lib/GOGO/WebMaster/Constants.pm
+-'  1  0  lib/GOGO/WebMaster/DomainData/Detailed.pm
+-'  93  0  ~/svn/search_trunk/projects/webmaster/lib/GOGO/WebMaster/DomainData/Detailed.pm
+-'  1  0  ~/.vimrc
+-'  164  27  ~/.vimrc
+-'  165  0  ~/.vimrc
+-'  86  24  ~/.vimrc
+-'  16  29  ~/.bashrc
+-'  875  33  ~/svn/search_trunk/projects/webmaster/lib/GOGO/WebMaster/DomainData/Detailed.pm
+-'  173  0  ~/.vimrc
+-'  35  69  ~/svn/search_trunk/projects/webmaster/lib/GOGO/WebMaster/DomainData/Detailed.pm
+-'  171  16  ~/.vimrc
+-'  136  58  ~/.vimrc
+-'  48  0  ~/svn/search_trunk/projects/webmaster/lib/GOGO/WebMaster/DomainData/Detailed.pm
+-'  42  23  ~/svn/search_trunk/projects/webmaster/lib/GOGO/WebMaster/DomainData/Detailed.pm
+-'  8  0  ~/svn/search_trunk/projects/webmaster/lib/GOGO/WebMaster/DomainData/Detailed.pm
+-'  541  0  ~/hlam/vim73/runtime/syntax/perl.vim
+-'  1  0  ~/vim73/share/vim/vim73/syntax/perl.vim
+-'  25  33  ~/.vimrc
+-'  8  0  ~/[Vundle] Installer
+-'  26  0  ~/.vimrc
+-'  1  0  ~/.vim/bundle/.vimrc
+-'  23  0  ~/.vimrc
+-'  15  0  ~/[Vundle] Installer
+-'  2  0  ~/.vimrc
+-'  385  0  ~/svn/search_trunk/projects/webmaster/lib/GOGO/WebMaster/DomainData/Detailed.pm
+-'  34  24  ~/.vimrc
+-'  5  34  ~/.vimrc
+-'  6  0  ~/.vimrc
+-'  33  0  ~/.vimrc
+-'  1  0  fugitive:///home/arefjev/.git//0/svn/search_trunk/projects/webmaster/lib/GOGO/WebMaster/DomainData/Detailed.pm
+-'  59  0  ~/svn/search_trunk/projects/webmaster/lib/GOGO/WebMaster/DomainData/Detailed.pm
+-'  67  10  ~/.vimrc
+-'  37  8  ~/.vimrc
+-'  55  13  ~/svn/search_trunk/projects/webmaster/lib/GOGO/WebMaster/DomainData/Detailed.pm
+-'  87  4  ~/svn/search_trunk/projects/webmaster/lib/GOGO/WebMaster/DomainData/Detailed.pm
+-'  45  8  ~/.vimrc
+-'  36  74  ~/svn/search_trunk/projects/webmaster/lib/GOGO/WebMaster/DomainData/Detailed.pm
+-'  1  0  ~/svn/search_trunk/projects/webmaster/lib/GOGO/WebMaster/DomainData/Detailed.pm
+-'  33  0  ~/svn/search_trunk/projects/webmaster/lib/GOGO/WebMaster/DomainData/Detailed.pm
+-'  7  51  ~/.screenrc
+-'  1  0  ~/.screenrc
+-'  112  0  ~/svn/search_trunk/projects/webmaster/lib/GOGO/WebMaster/DomainData/Detailed.pm
+-'  90  0  ~/svn/search_trunk/projects/webmaster/lib/GOGO/WebMaster/DomainData/Detailed.pm
+-'  71  0  ~/.vimrc
+-'  24  0  ~/.vimrc
+-'  405  40  ~/svn/search_trunk/projects/webmaster/lib/GOGO/WebMaster/DomainData/Detailed.pm
+-'  11  0  ~/.screenrc
+-'  3  0  ~/.screenrc
+-'  8  0  ~/.screenrc
+-'  2  0  ~/.screenrc
+-'  8  0  ~/.vimrc
+-'  17  0  ~/mount/fritz/.vimrc
+-'  1  0  ~/mount/fritz/.vimrc
+-'  95  0  ~/mount/fritz/.vimrc
+-'  33  0  ~/[Vundle] Installer
+-'  16  0  ~/.vimrc
+-'  1  0  ~/C
+-'  46  0  ~/[Vundle] Installer
+-'  30  0  ~/.vimrc
+-'  17  0  ~/mount/sipuha/svn_diff/qqq.pl
+-'  1  0  ~/mount/sipuha/svn_diff/qqq.pl
+-'  13  0  ~/mount/sipuha/svn_diff/qqq.pl
+-'  2  0  ~/mount/sipuha/svn_diff/qqq
+-'  1  0  ~/mount/sipuha/svn_diff/qqq
+-'  425  19  ~/Downloads/winetricks
+-'  91  9  ~/Downloads/winetricks
+-'  27  4  ~/Downloads/winetricks
+-'  10  0  ~/Downloads/winetricks
+-'  1  0  ~/Downloads/winetricks
+-'  426  4  ~/Downloads/winetricks
+-'  362  12  ~/Downloads/winetricks
+-'  4  38  ~/Downloads/winetricks
+-'  29  3  ~/.ssh/config
+-'  1  0  ~/.ssh/config
+-'  20  0  ~/.ssh/config
+-'  1  0  ~/.scripts/switch_monitors.pl
+-'  1  0  /var/lib/AccountsService/users/ag
+-'  16  24  ~/.ssh/config
+-'  19  23  ~/.ssh/config
+-'  18  17  ~/.ssh/config
+-'  21  12  ~/.ssh/config
+-'  74  0  ~/.ssh/config
+-'  8  12  ~/.config/synergy/synergys.conf
+-'  1  0  ~/.config/synergy/synergys.conf
+-'  86  0  /etc/nginx/sites-enabled/default
 
 # История местных отметок (от более свежих к старым):
 
-> ~/.vimrc
-	"	68	0
-	^	60	151
-	.	60	150
-	+	50	0
-	+	60	150
-
-> ~/.scripts/svn_diff_vim.pl
-	"	40	46
-	^	40	47
-	.	40	46
-	+	11	10
-	+	19	24
-	+	39	38
-	+	11	11
-	+	39	0
-	+	40	0
-	+	39	8
-	+	40	46
-
-> /tmp/arefjev_svn_diff/GOGO_Process_Open.pm
-	"	149	0
-
-> ~/svn/search_trunk/perllib/GOGO/Process/Open.pm
-	"	200	0
-	^	40	4
-	.	75	0
-	+	108	37
-	+	110	40
-	+	171	9
-	+	107	37
-	+	108	36
-	+	110	42
-	+	111	35
-	+	110	42
-	+	111	41
-	+	200	0
-	+	190	34
-	+	192	36
-	+	194	48
-	+	195	38
-	+	182	85
-	+	110	4
-	+	111	4
-	+	182	4
-	+	196	0
-	+	196	85
-	+	185	11
-	+	198	0
-	+	199	64
-	+	113	15
-	+	121	0
-	+	115	20
-	+	117	41
-	+	120	28
-	+	119	0
-	+	122	0
-	+	132	0
-	+	123	13
-	+	127	26
-	+	128	26
-	+	130	15
-	+	133	12
-	+	137	32
-	+	138	25
-	+	140	14
-	+	169	0
-	+	154	20
-	+	157	41
-	+	164	0
-	+	159	38
-	+	163	0
-	+	162	36
-	+	168	9
-	+	155	27
-	+	156	4
-	+	157	0
-	+	168	0
-	+	166	0
-	+	169	0
-	+	166	38
-	+	47	0
-	+	50	0
-	+	48	4
-	+	143	8
-	+	150	0
-	+	145	3
-	+	165	16
-	+	167	32
-	+	145	20
-	+	148	4
-	+	149	30
-	+	104	16
-	+	4	0
+> ~/NERD_tree_1
+	"	4	0
+	.	1	0
 	+	1	0
-	+	2	3
-	+	33	0
-	+	37	0
-	+	5	0
-	+	2	1
-	+	4	3
-	+	12	5
-	+	8	89
-	+	9	20
-	+	8	19
-	+	9	31
-	+	8	31
-	+	10	54
-	+	9	63
-	+	11	113
-	+	14	0
-	+	13	3
-	+	16	42
-	+	17	56
-	+	23	33
-	+	25	47
-	+	28	4
-	+	27	8
-	+	20	70
-	+	27	28
-	+	30	41
-	+	31	101
-	+	32	0
-	+	64	0
-	+	66	0
-	+	71	0
-	+	75	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
 
-> ~/svn/search_trunk/projects/sq/ControlP
+> ~/.bashrc
+	"	1	0
+	^	16	30
+	.	16	29
+	+	16	29
+
+> ~/svn/search_trunk/projects/sq/www/lib/GOGO/SQ/Interface/Assessor.pm
+	"	163	0
+
+> ~/ControlP
 	"	10	0
 	.	2	0
 	+	1	0
@@ -492,110 +384,121 @@ $
 	+	1	0
 	+	1	0
 	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
+	+	47	0
+	+	38	0
+	+	29	0
+	+	20	0
+	+	11	0
 	+	2	0
 
-> ~/svn/search_trunk/projects/sq/www/lib/GOGO/SQ/Interface/Assessor.pm
-	"	622	16
-
-> ~/svn/search_trunk/projects/sq/www/lib/GOGO/SQ/SysIface/Marks.pm
-	"	152	4
-
-> ~/svn/search_trunk/projects/sq/www/lib/GOGO/SQ/Batch.pm
-	"	47	0
-
-> ~/svn/search_trunk/perllib/GOGO/Process/Utils.pm
-	"	3	7
-
-> ~/svn/search_trunk/perllib/GOGO/Process/Timeout.pm
-	"	79	8
-	^	1	0
-	.	129	0
+> ~/svn/search_trunk/projects/sq/www/lib/GOGO/SQ/Interface/NERD_tree_1
+	"	4	0
+	.	1	0
 	+	1	0
-	+	121	0
-	+	121	0
-	+	121	0
+
+> ~/vim73/share/vim/vim73/autoload/spellfile.vim
+	"	182	6
+
+> ~/vim73/share/vim/vim73/menu.vim
+	"	432	23
+
+> ~/svn/search_trunk/projects/sq/www/lib/GOGO/SQ.pm
+	"	64	19
+
+> ~/svn/search_trunk/projects/sq/ControlP
+	"	10	0
+	.	2	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	11	0
 	+	2	0
-	+	122	0
-	+	124	0
-	+	129	0
-
-> ~/svn/search_trunk/projects/sq/www/bin/install/backup_sq_base.pl
-	"	44	0
-
-> ~/svn/search_trunk/projects/sq/www/lib/GOGO/SQ/Mark/WebRequest.pm
-	"	155	8
-
-> ~/svn/search_trunk/perllib/test.pl
-	"	15	18
-	^	13	12
-	.	13	11
-	+	16	0
-	+	4	0
-	+	7	95
-	+	9	42
-	+	7	80
-	+	15	0
-	+	5	16
-	+	15	33
-	+	10	21
-	+	15	19
-	+	7	110
-	+	15	0
-	+	11	27
-	+	14	0
-	+	13	11
-	+	11	14
-	+	13	11
-	y	11	7
-
-> ~/svn/search_trunk/perllib/GOGO/Process/.svn/text-base/Timeout.pm.svn-base
-	"	1	0
-
-> /tmp/arefjev_svn_diff/GOGO_Process_Timeout.pm
-	"	44	0
 
 > /tmp/arefjev_svn_diff/lib_GOGO_WebMaster_DomainData_Detailed.pm
-	"	698	0
+	"	878	0
+
+> lib/GOGO/WebMaster/DomainData/Detailed.pm
+	"	1	0
+
+> ~/.vimrc
+	"	1	0
+	^	164	28
+	.	164	28
+	+	19	16
+	+	65	10
+	+	53	0
+	+	34	24
+	+	23	0
+	+	20	0
+	+	22	0
+	+	24	0
+	+	25	0
+	+	26	0
+	+	167	0
+	+	136	0
+	+	171	16
+	+	172	0
+	+	173	0
+	+	201	0
+	+	170	13
+	+	168	0
+	+	159	24
+	+	161	13
+	+	165	38
+	+	165	0
+	+	162	0
+	+	163	0
+	+	164	0
+	+	163	35
+	+	164	28
 
 > ~/svn/search_trunk/projects/webmaster/lib/GOGO/WebMaster/DomainData/Detailed.pm
-	"	753	4
-	^	108	0
-	.	97	0
+	"	93	0
+	^	35	70
+	.	36	0
+	+	36	0
+
+> ~/svn/search_trunk/projects/webmaster/lib/GOGO/WebMaster/DomainData/ControlP
+	"	3	0
+	.	2	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
 	+	2	0
-	+	77	28
-	+	205	0
-	+	559	108
-	+	11	0
-	+	12	20
-	+	561	0
-	+	161	0
-	+	184	0
-	+	160	0
-	+	183	0
-	+	521	0
-	+	509	0
-	+	435	0
-	+	263	0
-	+	260	0
-	+	109	0
-	+	108	0
-	+	92	0
-	+	93	0
-	+	94	0
-	+	95	0
-	+	96	0
-	+	97	0
 
-> /tmp/arefjev_svn_diff/lib_GOGO_WebMaster_DomainData_Detailed_Url.pm
-	"	148	0
+> ~/git/my_vim/.vimrc
+	"	73	0
 
-> ~/svn/search_trunk/projects/webmaster/lib/GOGO/WebMaster/DomainData/Detailed/Url.pm
-	"	201	0
+> ~/vim73/share/vim/vim73/syntax/perl.vim
+	"	561	0
 
-> /tmp/arefjev_svn_diff/root_static_css_main.css
+> ~/hlam/vim73/runtime/syntax/perl.vim
+	"	541	0
+
+> ~/[Vundle] Installer
+	"	8	0
+	.	1	0
+	+	33	0
+	+	20	0
+	+	8	0
+	+	1	0
+
+> ~/.vim/bundle/.vimrc
 	"	1	0
+
+> ~/svn/search_trunk/projects/webmaster/lib/GOGO/WebMaster/DomainData/NERD_tree_1
+	"	4	0
+	.	1	0
+	+	1	0
+	+	1	0
+	+	1	0
