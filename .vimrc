@@ -202,7 +202,8 @@ set nocompatible
     set linebreak                                   " don't cut words on wrap
     set listchars=tab:>\                            " > to highlight <tab>
     set list                                        " displaying listchars
-    set mouse=                                      " disable mouse
+    "set mouse=                                      " disable mouse
+    set mouse=a                                     " mouse in all modes
     set noshowmode                                  " hide mode, got powerline
     set noexrc                                      " don't use other .*rc(s)
     set nostartofline                               " keep cursor column pos
@@ -211,7 +212,7 @@ set nocompatible
     set shortmess+=I                                " disable startup message
     set splitbelow                                  " splits go below w/focus
     set splitright                                  " vsplits go right w/focus
-    set ttymouse=xterm2                             " experimental
+    "set ttymouse=xterm2                             " experimental
     """ Folding {{{
         set foldcolumn=0                            " hide folding column
         set foldmethod=indent                       " folds using indent
