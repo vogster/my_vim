@@ -342,7 +342,7 @@ set nocompatible
             endfunction
         """ }}}
         """ Toggle relativenumber using <leader>r {{{
-            nnoremap <leader>r :call NumberToggle()<CR>
+            "nnoremap <leader>r :call NumberToggle()<CR>
 
             function! NumberToggle()
                 if(&relativenumber == 1)
@@ -465,17 +465,20 @@ set nocompatible
     nmap <leader>; :CtrlPMRUFiles<CR>
     nmap <leader>' :CtrlP<CR>
     map <leader>.     <Plug>NERDCommenterToggle
+    map <leader>r :NERDTreeFind<cr>
 
     let g:buffergator_autodismiss_on_select = 1
     let g:buffergator_split_size = 30
-    let g:Powerline_stl_path_style = 'short'
+    let g:Powerline_stl_path_style = 'relative'
     let g:ctrlp_working_path_mode = 0
     let g:tagbar_autoclose = 1
     let g:tagbar_type_perl = {
         \ 'ctagstype'   : 'Perl',
         \ 'kinds'       : [
             \ 'c:constants',
-            \ 's:subroutines'
+            \ 's:subroutines',
+            \ 'a:attributes',
+            \ 'm:modifiers'
         \ ]
     \ }
 
