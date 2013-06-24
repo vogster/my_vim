@@ -236,7 +236,7 @@ set nocompatible
     """ }}}
 """ }}}
 """ Files {{{
-    set autochdir                                   " always use curr. dir.
+    "set autochdir                                   " always use curr. dir.
     set autoread                                    " refresh if changed
     set backup                                      " backup curr file
     set backupdir=$HOME/.vim/backup                 " backup director{y,ies}
@@ -411,7 +411,7 @@ set nocompatible
 
     " CtrlP - don't recalculate files on start (slow)
     let g:ctrlp_clear_cache_on_exit = 0
-    let g:ctrlp_working_path_mode = 'ra'
+    "let g:ctrlp_working_path_mode = 'ra'
 
     " NERDTree
     let g:NERDTreeWinPos = "left"
@@ -470,6 +470,7 @@ set nocompatible
     let g:buffergator_split_size = 30
     let g:Powerline_stl_path_style = 'short'
     let g:ctrlp_working_path_mode = 0
+    let g:tagbar_autoclose = 1
     let g:tagbar_type_perl = {
         \ 'ctagstype'   : 'Perl',
         \ 'kinds'       : [
