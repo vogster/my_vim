@@ -167,7 +167,7 @@ set nocompatible
             " UTF-8 if your locale is something else.
             " WARNING: this will affect encoding used when editing files!
             "
-            " set encoding=utf-8                    " for Powerline glyphs
+            set encoding=utf-8                    " for Powerline glyphs
         """ }}}
         """ Gvim {{{
             set guifont=DejaVu\ Sans\ Mono\ for\ Powerline\ 8
@@ -410,7 +410,7 @@ set nocompatible
     let g:clang_user_options="-std=c++0x"
 
     " CtrlP - don't recalculate files on start (slow)
-    let g:ctrlp_clear_cache_on_exit = 0
+    let g:ctrlp_clear_cache_on_exit = 1
     "let g:ctrlp_working_path_mode = 'ra'
 
     " NERDTree
@@ -485,5 +485,6 @@ set nocompatible
     map w b
     set cursorcolumn
     let perl_no_extended_vars=1
+    set fileencodings=utf8,cp1251
     """""""""""""""""""""""""""""""""""""""""""""
 
