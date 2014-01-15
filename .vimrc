@@ -85,6 +85,7 @@ set nocompatible
 
     " Handle surround chars like ''
     Bundle 'tpope/vim-surround'
+    Bundle 'vim-scripts/AutoComplPop'
 
     " Align your = etc.
     "Bundle 'vim-scripts/Align'
