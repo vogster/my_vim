@@ -108,6 +108,9 @@ set nocompatible
     " REQUIREMENTS: ctags
     Bundle 'majutsushi/tagbar'
 
+    Bundle 'mattn/webapi-vim'
+    Bundle 'mattn/gist-vim'
+
     " http://pastie.org
     " REQUIREMENTS: ruby in $PATH (not vim compiled with +ruby)
     "Bundle 'simmel/vim-pastie'
@@ -467,6 +470,7 @@ set nocompatible
     nmap <leader>' :CtrlP<CR>
     map <leader>.     <Plug>NERDCommenterToggle
     map <leader>r :NERDTreeFind<cr>
+    map <leader>g :Gist -p<cr>
 
     let g:buffergator_autodismiss_on_select = 1
     let g:buffergator_split_size = 30
