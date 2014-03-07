@@ -472,6 +472,8 @@ set nocompatible
     map <leader>r :NERDTreeFind<cr>
     map <leader>g :Gist -p<cr>
 
+    nmap <leader>d :Gblame<cr>
+
     let g:buffergator_autodismiss_on_select = 1
     let g:buffergator_split_size = 30
     let g:Powerline_stl_path_style = 'relative'
