@@ -86,7 +86,7 @@ set nocompatible
 
     " Handle surround chars like ''
     Bundle 'tpope/vim-surround'
-    Bundle 'vim-scripts/AutoComplPop'
+    "Bundle 'vim-scripts/AutoComplPop'
 
     " Align your = etc.
     "Bundle 'vim-scripts/Align'
@@ -148,6 +148,7 @@ set nocompatible
         highlight Normal ctermbg=NONE               " use terminal background
         highlight nonText ctermbg=NONE              " use terminal background
         au BufRead,BufNewFile *.txt set ft=sh       " opens .txt w/highlight
+        au BufRead,BufNewFile *.tt set ft=html      
         """ Tab colors {{{
             hi TabLineFill ctermfg=NONE ctermbg=233
             hi TabLine ctermfg=241 ctermbg=233
@@ -220,7 +221,7 @@ set nocompatible
     "set ttymouse=xterm2                             " experimental
     """ Folding {{{
         set foldcolumn=0                            " hide folding column
-        set foldmethod=indent                       " folds using indent
+        set foldmethod=manual                       " folds using indent
         set foldnestmax=10                          " max 10 nested folds
         set foldlevelstart=99                       " folds open by default
     """ }}}
@@ -473,18 +474,22 @@ set nocompatible
     map <leader>r :NERDTreeFind<cr>
     map <leader>g :Gist -p<cr>
 
+    nmap <leader>d :Gblame<cr>
+
     let g:buffergator_autodismiss_on_select = 1
     let g:buffergator_split_size = 30
     let g:Powerline_stl_path_style = 'relative'
     let g:ctrlp_working_path_mode = 0
     let g:tagbar_autoclose = 1
+    let g:tagbar_width = 70
     let g:tagbar_type_perl = {
         \ 'ctagstype'   : 'Perl',
         \ 'kinds'       : [
             \ 'c:constants',
             \ 's:subroutines',
             \ 'a:attributes',
-            \ 'm:modifiers'
+            \ 'm:modifiers',
+            \ 'p:packages'
         \ ]
     \ }
 
