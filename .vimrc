@@ -54,8 +54,9 @@ set nocompatible
     Bundle 'jeetsukumaran/vim-buffergator'
     " vim-mxd
     "Bundle 'rkitover/perl-vim-mxd'
-    Bundle 'vim-perl/vim-perl'
-    Bundle 'motemen/xslate-vim'
+    "Bundle 'vim-perl/vim-perl'
+    Bundle 'WolfgangMehner/vim-plugins'
+    "Bundle 'motemen/xslate-vim'
     Bundle 'pangloss/vim-javascript'
     Bundle 'jdevera/vim-protobuf-syntax'
 
@@ -163,7 +164,7 @@ set nocompatible
         set vb t_vb=                                " disable beep and flashing
         set wildignore=.bak,.pyc,.o,.ojb,.,a,       " ignore said files
                        \.pdf,.jpg,.gif,.png,
-                       \.avi,.mkv,.so
+                       \.avi,.mkv,.so,.class,.jar
         set wildmenu                                " better auto complete
         set wildmode=longest,list                   " bash-like auto complete
         """ Encoding {{{
@@ -491,5 +492,10 @@ set nocompatible
     set cursorcolumn
     let perl_no_extended_vars=1
     set fileencodings=utf8,cp1251
+    let g:ctrlp_custom_ignore = {
+        \ 'dir':  '\v[\/]\.(git|hg|svn)$',
+        \ 'file': '\v\.(exe|so|dll|class|jar)$',
+        \ 'link': 'some_bad_symbolic_links',
+        \ }
     """""""""""""""""""""""""""""""""""""""""""""
 
