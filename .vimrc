@@ -183,9 +183,9 @@ set nocompatible
         """ }}}
         """ Powerline {{{
             let g:Powerline_symbols = 'fancy'  " see :h Powerline_symbols
-            let g:Powerline_symbols_override = {
-                        \ 'BRANCH': [0x2213],
-                        \ }                         " use ∓
+            "let g:Powerline_symbols_override = {
+                        "\ 'BRANCH': [0x2213],
+                        "\ }                         " use ∓
             """ Powerline mode names {{{
                 let g:Powerline_mode_n  = ' N '
                 let g:Powerline_mode_i  = ' I '
