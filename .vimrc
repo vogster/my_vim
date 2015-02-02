@@ -1,9 +1,3 @@
-"----------------------------------------------"
-" Author:       timsateroy@gmail.com           "
-" Source:       http://vim.thevoid.no (github) "
-" Date:         06.05.13 (rougly)              "
-"----------------------------------------------"
-
 " vimconf is not vi-compatible
 set nocompatible
 
@@ -458,7 +452,6 @@ set nocompatible
     endif
 """ }}}
 
-    """"""""""""""""""" My """"""""""""""""""""""
     nnoremap p ]p
     nnoremap <C-p> p
 
@@ -502,5 +495,4 @@ set nocompatible
         \ 'file': '\v\.(exe|so|dll|class|jar)$',
         \ 'link': 'some_bad_symbolic_links',
         \ }
-    """""""""""""""""""""""""""""""""""""""""""""
 
